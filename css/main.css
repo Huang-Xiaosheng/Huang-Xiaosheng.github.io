@@ -274,7 +274,7 @@ p {
   height: 90vh;
 }
 .full-hero:after {
-  border: 10zpx solid;
+  border: 10px solid;
   border-color:#fff transparent transparent;
   bottom: 2vh;
   content: "";
