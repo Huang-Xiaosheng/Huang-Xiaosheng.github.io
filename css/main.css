@@ -511,10 +511,6 @@ p {
   max-width: 40em;
   width: 85vw;
 }
-.post-content img {
-  float: none;
-  width: 100%;
-}
 .pull-left {
   float: left;
   margin: 2em 2em 2em -2%;
@@ -668,5 +664,9 @@ p {
   }
   .blog-previews {
     padding: 0;
+  }
+  .post-content img {
+    float: none;
+    width: 100%;
   }
 }
