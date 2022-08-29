@@ -320,7 +320,7 @@ p {
   padding: 0;
   text-align: center;
 }
-.social-list>li {
+.social-list > li {
   display: inline-block;
   margin: 0 0.5em;
 }
