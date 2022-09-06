@@ -221,7 +221,6 @@ p {
   grid-template-columns: minmax(auto, 15em) 1fr minmax(auto, 20em);
 }
 .col {
-  box-sizing: border-box;
   padding: 2em;
 }
 .col-three .col ~ .col {
@@ -255,9 +254,13 @@ p {
 
 /* HERO STYLES */
 .full-hero {
+  align-content: center;
   background-color: #c7dbfc;
   background-size: cover;
+  color: #fff;
+  display: grid;
   height: 90vh;
+  text-align: center;
 }
 .full-hero:after {
   border: 10px solid;
@@ -273,15 +276,11 @@ p {
 .hero-home {
   background-image: url(/images/shark.jpg);
   background-position: center top;
-  color: #fff;
-  display: grid;
-  align-content: center;
-  text-align: center;
 }
 .hero-home h1 {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 7vw;
   margin-bottom: 0.25em;
+  text-transform: uppercase;
 }
 .hero-home .social-link {
   background-color: rgba(255, 255, 255, 0.8);
@@ -292,7 +291,7 @@ p {
   color: #fff;
 }
 .half-hero {
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   height: 40vh;
 }
@@ -305,7 +304,7 @@ p {
   color: #fff;
   display: inline-block;
   font-family: helvetica, arial, sans;
-  font-size: 1.7em;
+  font-size: 1.6em;
   font-weight: bold;
   height: 1.5em;
   line-height: 1;
@@ -404,21 +403,23 @@ p {
 
 /* GALLERY STYLES */
 .gallery-thumbs {
+  box-sizing: border-box;
   height: 90vh;
   overflow: scroll;
 }
 .gallery-thumbs > div {
   cursor: pointer;
 }
+.gallery-thumbs .current {
+  cursor: default;
+}
 .gallery-thumbs img {
   box-sizing: border-box;
   box-shadow: 0 0 0 5px transparent;
+  margin: 0 0 10px;
   opacity: 0.5;
   transition: all 0.3s ease-in-out;
   width: 100%;
-}
-.gallery-thumbs > div ~ div img {
-  margin: 10px 0 0;
 }
 .gallery-thumbs img:hover {
   opacity: 1;
@@ -476,7 +477,6 @@ p {
 }
 .post-header img {
   border-radius: 50%;
-  display: inline-block;
   height: 2.5em;
   vertical-align: middle;
 }
@@ -568,6 +568,9 @@ p {
   .header-nav li:first-child a {
     color: #fff;
   }
+  .header-nav>li:first-child a:hover {
+    color: #ed6e2f;
+  }
   /* HIDE DROPDOWN IN THE NAV MENU */
   .header-nav .dropdown:hover .drop-menu,
   .header-nav .drop-trigger:after {
@@ -619,6 +622,9 @@ p {
   .gallery .col {
     padding: 1em;
   }
+  .gallery .col ~ .col {
+    border-left: none;
+  }
   .gallery .gallery-thumbs {
     height: auto;
     white-space: nowrap;
@@ -629,10 +635,8 @@ p {
   }
   .gallery-thumbs img {
     height: 7vh;
+    margin: 0 10px 0 0;
     width: auto;
-  }
-  .gallery-thumbs > div ~ div img {
-    margin: 0 0 0 10px;
   }
 
   /* BLOG STYLES */
