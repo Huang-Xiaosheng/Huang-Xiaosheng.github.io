@@ -374,7 +374,7 @@ p {
 .bio-wrapper {
   display: grid;
   font-size: 24px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
   margin: auto;
   max-width: 960px;
 }
@@ -680,11 +680,9 @@ textarea {
   }
 
   /* BIO STYLES */
-  .bio-wrapper {
-    grid-template-columns: 1fr;
-  }
   .bio-box {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    padding: 0;
   }
 
   /* GALLERY STYLES */
