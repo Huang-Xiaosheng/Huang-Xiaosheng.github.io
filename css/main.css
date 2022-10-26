@@ -42,7 +42,8 @@ p {
 
 /* HEADER STYLES */
 .header {
-  background-color: #000;
+  --header-background-color: #000;
+  background-color: var(--header-background-color);
   color: #fff;
   left: 0;
   position: fixed;
@@ -51,7 +52,7 @@ p {
   z-index: 20;
 }
 .header-logo {
-  background-color: #000;
+  background-color: var(--header-background-color);
   box-sizing: border-box;
   display: block;
   height: var(--header-height);
@@ -654,7 +655,7 @@ textarea {
     max-height: 1000px;
   }
   .mobile-menu-check:checked ~ .show-mobile-menu:after {
-    background-color: #000;
+    background-color: var(--header-background-color);
     color: #ed6e2f;
     content: "CLOSE";
     left: 0;
