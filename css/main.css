@@ -68,10 +68,12 @@ p {
   width: 4.3vh;
 }
 .header-nav {
+  align-items: center;
   display: flex;
   float: right;
+  height: var(--header-height);
   list-style: none;
-  padding: 5.5vh 30px 0 0;
+  padding-right: 30px;
 }
 .header-nav > li ~ li {
   border-left: 1px solid rgba(255, 255, 255, 0.3);
@@ -610,8 +612,8 @@ textarea {
   }
   .header-nav {
     background-color: #444;
-    box-sizing: border-box;
     display: initial;
+    height: auto;
     left: 0;
     max-height: 0;
     overflow: hidden;
