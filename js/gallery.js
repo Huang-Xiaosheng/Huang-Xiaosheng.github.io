@@ -8,7 +8,7 @@ let description  = galleryInfo.querySelector(".description");
 
 thumbnails.forEach( thumbnail => {
   // Preload large images.
-  let newImageSrc  = thumbnail.dataset.largeVersion;
+  let newImageSrc  = thumbnail.src.replace("small", "large");
   let largeVersion = new Image();
   largeVersion.src = newImageSrc;
 
