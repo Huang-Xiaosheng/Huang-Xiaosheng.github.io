@@ -24,7 +24,8 @@ function Phrase(content) {
 function palindromeTester(event) {
   event.preventDefault();
 
-  let phrase = new Phrase(event.target.phrase.value);
+  let textarea = event.target.phrase;
+  let phrase = new Phrase(textarea.value || textarea.placeholder);
   let palindromeResult = document.querySelector("#palindromeResult");
 
   if (phrase.palindrome()) {
